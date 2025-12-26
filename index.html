@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная Новогодняя Открытка</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Новогодние украшения на фоне -->
+        <div class="snowflakes-container" id="snowflakes"></div>
+        
+        <!-- Основная карточка -->
+        <div class="card">
+            <div class="card-header">
+                <h1><i class="fas fa-star"></i> С Новым 2025 Годом! <i class="fas fa-star"></i></h1>
+                <p class="subtitle">Пусть этот год принесет счастье, здоровье и удачу!</p>
+            </div>
+            
+            <!-- Таймер -->
+            <div class="timer-section">
+                <h2><i class="far fa-clock"></i> До Нового года осталось:</h2>
+                <div class="timer">
+                    <div class="time-block">
+                        <div class="time-value" id="days">00</div>
+                        <div class="time-label">дней</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">
+                        <div class="time-value" id="hours">00</div>
+                        <div class="time-label">часов</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">
+                        <div class="time-value" id="minutes">00</div>
+                        <div class="time-label">минут</div>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-block">
+                        <div class="time-value" id="seconds">00</div>
+                        <div class="time-label">секунд</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Интерактивные элементы (теперь без перетаскивания) -->
+            <div class="interactive-section">
+                <h2><i class="fas fa-gamepad"></i> Новогодние украшения:</h2>
+                <p class="instruction">Кликайте на украшения, чтобы услышать звуки!</p>
+                
+                <div class="interactive-elements">
+                    <!-- Интерактивные элементы с кликами -->
+                    <div class="interactive-element" id="element1" data-sound="bell">
+                        <div class="element-content">
+                            <i class="fas fa-bell"></i>
+                            <span>Колокольчик</span>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-element" id="element2" data-sound="snowflake">
+                        <div class="element-content">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Снежинка</span>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-element" id="element3" data-sound="gift">
+                        <div class="element-content">
+                            <i class="fas fa-gift"></i>
+                            <span>Подарок</span>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-element" id="element4" data-sound="tree">
+                        <div class="element-content">
+                            <i class="fas fa-tree"></i>
+                            <span>Ёлочка</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="musicBtn" class="control-btn">
+                        <i class="fas fa-music"></i> Включить музыку
+                    </button>
+                    <button id="fireworksBtn" class="control-btn">
+                        <i class="fas fa-fire"></i> Запустить фейерверк
+                    </button>
+                    <button id="allSoundsBtn" class="control-btn">
+                        <i class="fas fa-volume-up"></i> Все звуки разом
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Поздравительное сообщение -->
+            <div class="message-section">
+                <div class="message">
+                    <p>Дорогие друзья! Пусть Новый 2025 год будет полон ярких моментов, 
+                    теплых встреч и исполнения самых заветных желаний!</p>
+                    <p>Желаем вам здоровья, процветания и новогоднего настроения!</p>
+                </div>
+                <div class="signature">
+                    <p>С наилучшими пожеланиями,</p>
+                    <p class="signature-name">Команда разработчиков</p>
+                </div>
+            </div>
+            
+            <!-- Эффекты -->
+            <div class="effects-container">
+                <div class="firework" id="firework1"></div>
+                <div class="firework" id="firework2"></div>
+                <div class="firework" id="firework3"></div>
+            </div>
+        </div>
+        
+        <!-- Аудио элементы -->
+        <audio id="bellSound" preload="metadata">
+            <source src="./sounds/колокольчик.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="snowflakeSound" preload="metadata">
+            <source src="./sounds/снег.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="giftSound" preload="metadata">
+            <source src="./sounds/подарок.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="treeSound" preload="metadata">
+            <source src="./sounds/елочка.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="backgroundMusic" preload="metadata">
+            <source src="./sounds/Глюкоза - А снег идет.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="fireworkSound" preload="metadata">
+            <source src="https://assets.mixkit.co/sfx/preview/mixkit-fireworks-show-audio-3069.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
